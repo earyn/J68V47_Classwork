@@ -9,7 +9,7 @@ public class L5E1 {
         System.out.print("Input a base number: ");
         int base = scanner.nextInt();
 
-        for (int count=1; count<=10; count++)
+        for (int count=1; count=10; count--)
         {
             int answer = (base * count);
             System.out.println(base + " x " + count + " = " + answer);
