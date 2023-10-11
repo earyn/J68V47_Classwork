@@ -20,6 +20,10 @@ public class L6E2 {
               System.out.println("15:12");
           } else if (option ==3) {
               System.out.println("Why do scuba divers fall backwards out of the boat? Because if they fell forward they'd still be in the boat.");
+          } else if (option ==4){
+              System.out.println("Bye!");
+          } else {
+              System.out.println("This isn't a valid option. Try a number between 1 and 4.");
           }
 
         }while (option != 4);
