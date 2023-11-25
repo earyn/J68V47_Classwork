@@ -6,14 +6,17 @@ public class L9E1 {
         System.out.print("Enter your name: ");
         String response = scanner.nextLine();
 
+        for (int i = 10; i >= 0; i--) {
             try {
-                for (int i = 10; i >= 0; i--) {
-                    String character = response.substring(0, 1);
-                    response = response.substring(1, response.length());
-                    System.out.print(character);
-                }
-                } catch (Exception e) {
-            System.out.println("I'm sorry, something has went wrong.");
+                String character = response.substring(0, 1);
+                response = response.substring(1, response.length());
+                System.out.print(character);
+            } catch (Exception e) {
+                System.out.printf("%nWoops, something went wrong.%n" + e.toString());
+                break;
             }
         }
+
+
     }
+}
