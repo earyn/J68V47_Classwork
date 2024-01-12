@@ -52,7 +52,7 @@ public class project {
 
 
             } else if (option == 2) {
-                System.out.println("Earyn please fill this in!!!");
+                System.out.println("Earyn please fill this in!!");
             } else if (option == 3) {
                 System.out.println("SEARCH FUNCTION");
             } else if (option == 4) {
