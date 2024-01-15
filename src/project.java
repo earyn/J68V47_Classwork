@@ -207,7 +207,7 @@ public class project {
 
     public static String getYearFinished(Scanner scanner) {
         System.out.print("Year Finished: ");
-        int year = getNumberInRange(scanner, 1969, 2025);
+        int year = getNumberInRange(scanner, 2023, 2025);
         return Integer.toString(year);
     }
 
