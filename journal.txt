@@ -1,2 +1,1 @@
-Title: pride & prejudice,Author: jane austen,Genre: romance,Medium: prose,No. of Pages: 206,Rating: 10,Date: 23-March-2023,Comment: fav book
-Title: The Rats,Author: James Herbert,Genre: Horror,Medium: Prose,No. of Pages: 300,Rating: 7,Date: 02-February-2024,Comment: rats
+Title: pride & prejudice,Author: jane austen,Genre: romance,Medium: prose,No. of Pages: 206,Rating: 10,Date: 23-December-2023,Comment: fav

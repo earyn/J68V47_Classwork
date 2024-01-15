@@ -16,7 +16,8 @@ public class project {
         }
     }
     public static void continuePrompt(Scanner scanner) {
-        System.out.println("Would you like to continue? (Y/N)");
+        System.out.println(" ");
+        System.out.println("Would you like to continue? (Enter either Y / N)");
         String answer = scanner.nextLine();
         if (answer.equalsIgnoreCase("N")) {
             terminateProgram();
@@ -75,6 +76,7 @@ public class project {
 
     public static int getValidMenuOption(Scanner scanner) {
         int option;
+
         while (true) {
             System.out.println("Hello! What would you like to do today?");
             System.out.println(" ");
@@ -85,15 +87,15 @@ public class project {
             System.out.println("Please enter a number...");
             option = scanner.nextInt();
 
-                    if (option < 1 || option > 4) {
-                        System.out.println("This isn't a valid option. Try another number.");
-                        System.out.println(" ");
-                    } else {
-                        scanner.nextLine();
-                        return option;
-                    }
-                }
+            if (option < 1 || option > 4) {
+                    System.out.println("This isn't a valid option. Try another number.");
+                    System.out.println(" ");
+            } else {
+                scanner.nextLine();
+                return option;
             }
+        }
+    }
 
     public static int getNumberInRange(Scanner scanner, int min, int max) {
         while (true) {
@@ -205,7 +207,7 @@ public class project {
 
     public static String getYearFinished(Scanner scanner) {
         System.out.print("Year Finished: ");
-        int year = getNumberInRange(scanner, 1969, 2024);
+        int year = getNumberInRange(scanner, 1969, 2025);
         return Integer.toString(year);
     }
 
@@ -232,24 +234,9 @@ public class project {
                 PrintWriter print = new PrintWriter(new FileWriter("journal.txt", true))
         ) {
             print.println(
-                    "Title: " +
-                            title +
-                            ",Author: " +
-                            author +
-                            ",Genre: " +
-                            genre +
-                            ",Medium: " +
-                            medium +
-                            ",No. of Pages: " +
-                            noPage +
-                            ",Rating: " +
-                            rating +
-                            ",Date: " +
-                            dateFinished +
-                            ",Comment: " +
-                            comment
-            );
-            System.out.println("Entry added!");
+                    "Title: " + title + ",Author: " + author + ",Genre: " + genre + ",Medium: " + medium + ",No. of Pages: " + noPage + ",Rating: " + rating + ",Date: " + dateFinished + ",Comment: " + comment);
+            System.out.println(" ");
+            System.out.println("Entry added! ✅");
         } catch (Exception e) {
             System.out.println("Error occurred writing to file: " + e.toString());
         }
@@ -280,18 +267,25 @@ public class project {
     }
 
     public static void showTotalStats() {
-        System.out.println("Here are your statistics! \uD83D\uDCCA3333333");
+        System.out.println("Here are your statistics! \uD83D\uDCCA");
         System.out.println(" ");
-        System.out.println("Books Read in December: " + booksPerMonth("December"));
         System.out.println("Books Read in January: " + booksPerMonth("January"));
         System.out.println("Books Read in February: " + booksPerMonth("February"));
         System.out.println("Books Read in March: " + booksPerMonth("March"));
         System.out.println("Books Read in April: " + booksPerMonth("April"));
         System.out.println("Books Read in May: " + booksPerMonth("May"));
         System.out.println("Books Read in June: " + booksPerMonth("June"));
+        System.out.println("Books Read in July: " + booksPerMonth("July"));
+        System.out.println("Books Read in August: " + booksPerMonth("August"));
+        System.out.println("Books Read in September: " + booksPerMonth("September"));
+        System.out.println("Books Read in October: " + booksPerMonth("October"));
+        System.out.println("Books Read in November: " + booksPerMonth("November"));
+        System.out.println("Books Read in December: " + booksPerMonth("December"));
+        System.out.println(" ");
         System.out.println("Books Read in 2023: " + booksPerYear("2023"));
         System.out.println("Books Read in 2024: " + booksPerYear("2024"));
-        System.out.println("Books Read in 2022: " + booksPerYear("2022"));
+        System.out.println("Books Read in 2025: " + booksPerYear("2025"));
+        System.out.println(" ");
         System.out.println("Total Pages Read: " + totalPagesRead());
         System.out.println(" ");
     }
