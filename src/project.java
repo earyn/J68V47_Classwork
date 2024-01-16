@@ -80,7 +80,7 @@ public class project {
         while (true) {
             System.out.println("Hello! What would you like to do today?");
             System.out.println(" ");
-            System.out.println("\uD83D\uDCD5 1. Add an entry to the library.");
+            System.out.println("\uD83D\uDCD5 1. Add an entry to the Journal.");
             System.out.println("\uD83D\uDCD7 2. See Previous Journal Entries.");
             System.out.println("\uD83D\uDCD8 3. See My Statistics!");
             System.out.println("\uD83D\uDCD9 4. Quit");
