@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.Scanner;
-import java.io.IOException;
 
 public class AtoZ {
 
@@ -81,26 +80,30 @@ public class AtoZ {
     public static int getValidMenuOption(Scanner scanner) {
 
         int option;
+        while (true) {
+            System.out.println("Hello! What would you like to do today?");
+            System.out.println(" ");
+            System.out.println("\uD83D\uDCD5 1. Add an entry to the Journal.");
+            System.out.println("\uD83D\uDCD7 2. See Previous Journal Entries.");
+            System.out.println("\uD83D\uDCD8 3. See My Statistics!");
+            System.out.println("\uD83D\uDCD9 4. Quit");
+            System.out.println("Please enter a number between 1 and 4...");
 
-            while (true) {
-                System.out.println("Hello! What would you like to do today?");
-                System.out.println(" ");
-                System.out.println("\uD83D\uDCD5 1. Add an entry to the Journal.");
-                System.out.println("\uD83D\uDCD7 2. See Previous Journal Entries.");
-                System.out.println("\uD83D\uDCD8 3. See My Statistics!");
-                System.out.println("\uD83D\uDCD9 4. Quit");
-                System.out.println("Please enter a number...");
-                option = scanner.nextInt();
+            try {
+                option = Integer.parseInt(scanner.nextLine());
 
                 if (option < 1 || option > 4) {
-                    System.out.println("This isn't a valid option. Try another number.");
+                    System.out.println("This isn't a valid option. Please enter a number between 1 and 4.");
                     System.out.println(" ");
                 } else {
-                    scanner.nextLine();
                     return option;
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+                System.out.println(" ");
             }
         }
+    }
 
 
 
