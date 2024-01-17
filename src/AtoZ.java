@@ -81,31 +81,33 @@ public class AtoZ {
 
         int option;
         while (true) {
-            System.out.println("Hello! What would you like to do today?");
+            System.out.println(" ");
+            System.out.println("Welcome to AtoZ! What would you like to do today?");
             System.out.println(" ");
             System.out.println("\uD83D\uDCD5 1. Add an entry to the Journal.");
             System.out.println("\uD83D\uDCD7 2. See Previous Journal Entries.");
             System.out.println("\uD83D\uDCD8 3. See My Statistics!");
             System.out.println("\uD83D\uDCD9 4. Quit");
+            System.out.println(" ");
             System.out.println("Please enter a number between 1 and 4...");
 
             try {
                 option = Integer.parseInt(scanner.nextLine());
 
                 if (option < 1 || option > 4) {
+                    System.out.println(" ");
                     System.out.println("This isn't a valid option. Please enter a number between 1 and 4.");
                     System.out.println(" ");
                 } else {
                     return option;
                 }
             } catch (NumberFormatException e) {
+                System.out.println(" ");
                 System.out.println("Invalid input. Please enter a number.");
                 System.out.println(" ");
             }
         }
     }
-
-
 
     public static int getNumberInRange(Scanner scanner, int min, int max) {
         while (true) {
@@ -253,7 +255,8 @@ public class AtoZ {
     }
 
     public static void showJournalEntries() {
-        System.out.println("\uD83D\uDCD6 Here are your previous journal entries! \uD83D\uDCDA4");
+        System.out.println(" ");
+        System.out.println("\uD83D\uDCD6 Here are your previous journal entries! \uD83D\uDCDA");
         System.out.println(" ");
         try (
                 BufferedReader br = new BufferedReader(new FileReader("journal.txt"))
