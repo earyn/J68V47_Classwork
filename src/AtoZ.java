@@ -254,7 +254,7 @@ public class AtoZ {
                 for (int i = 0; i < info.length; i++) {
                     System.out.println(info[i]);
                 }
-                System.out.println("--------------------");
+                System.out.println("---------------------");
             }
         } catch (IOException e) {
             System.out.println("Error occurred reading file: " + e.toString());
