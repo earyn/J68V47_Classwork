@@ -1,11 +1,13 @@
 import java.io.*;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class AtoZ {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
+
             switch (getValidMenuOption(scanner)) {
                 case 1 -> saveEntryToFile(scanner);
                 case 2 -> showJournalEntries();
@@ -15,6 +17,7 @@ public class AtoZ {
             continuePrompt(scanner);
         }
     }
+
     public static void continuePrompt(Scanner scanner) {
         System.out.println(" ");
         System.out.println("Would you like to continue? (Enter either Y / N)");
@@ -23,6 +26,7 @@ public class AtoZ {
             terminateProgram();
         }
     }
+
     public static int booksPerMonth(String month) {
         int totalMonth = 0;
         try (
@@ -75,27 +79,30 @@ public class AtoZ {
     }
 
     public static int getValidMenuOption(Scanner scanner) {
+
         int option;
 
-        while (true) {
-            System.out.println("Hello! What would you like to do today?");
-            System.out.println(" ");
-            System.out.println("\uD83D\uDCD5 1. Add an entry to the Journal.");
-            System.out.println("\uD83D\uDCD7 2. See Previous Journal Entries.");
-            System.out.println("\uD83D\uDCD8 3. See My Statistics!");
-            System.out.println("\uD83D\uDCD9 4. Quit");
-            System.out.println("Please enter a number...");
-            option = scanner.nextInt();
+            while (true) {
+                System.out.println("Hello! What would you like to do today?");
+                System.out.println(" ");
+                System.out.println("\uD83D\uDCD5 1. Add an entry to the Journal.");
+                System.out.println("\uD83D\uDCD7 2. See Previous Journal Entries.");
+                System.out.println("\uD83D\uDCD8 3. See My Statistics!");
+                System.out.println("\uD83D\uDCD9 4. Quit");
+                System.out.println("Please enter a number...");
+                option = scanner.nextInt();
 
-            if (option < 1 || option > 4) {
+                if (option < 1 || option > 4) {
                     System.out.println("This isn't a valid option. Try another number.");
                     System.out.println(" ");
-            } else {
-                scanner.nextLine();
-                return option;
+                } else {
+                    scanner.nextLine();
+                    return option;
+                }
             }
         }
-    }
+
+
 
     public static int getNumberInRange(Scanner scanner, int min, int max) {
         while (true) {
